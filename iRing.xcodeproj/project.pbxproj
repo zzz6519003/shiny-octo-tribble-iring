@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A421BFC9BD94405C9BDFB1F1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB49D4B27D6C468084382878 /* libPods.a */; };
 		F1C6B57F1963A57500841ED9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1C6B57E1963A57500841ED9 /* Foundation.framework */; };
 		F1C6B5811963A57500841ED9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1C6B5801963A57500841ED9 /* CoreGraphics.framework */; };
 		F1C6B5831963A57500841ED9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1C6B5821963A57500841ED9 /* UIKit.framework */; };
@@ -22,6 +23,7 @@
 		F1C6B5A31963A57500841ED9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1C6B5821963A57500841ED9 /* UIKit.framework */; };
 		F1C6B5AB1963A57500841ED9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1C6B5A91963A57500841ED9 /* InfoPlist.strings */; };
 		F1C6B5AD1963A57500841ED9 /* iRingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C6B5AC1963A57500841ED9 /* iRingTests.m */; };
+		F1C6B5FE19643D5C00841ED9 /* img.png in Resources */ = {isa = PBXBuildFile; fileRef = F1C6B5FD19643D5C00841ED9 /* img.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C1CD3D43C3C497297F53579 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		CB49D4B27D6C468084382878 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1C6B57B1963A57500841ED9 /* iRing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1C6B57E1963A57500841ED9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F1C6B5801963A57500841ED9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -56,6 +60,7 @@
 		F1C6B5A81963A57500841ED9 /* iRingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iRingTests-Info.plist"; sourceTree = "<group>"; };
 		F1C6B5AA1963A57500841ED9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F1C6B5AC1963A57500841ED9 /* iRingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iRingTests.m; sourceTree = "<group>"; };
+		F1C6B5FD19643D5C00841ED9 /* img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +71,7 @@
 				F1C6B5811963A57500841ED9 /* CoreGraphics.framework in Frameworks */,
 				F1C6B5831963A57500841ED9 /* UIKit.framework in Frameworks */,
 				F1C6B57F1963A57500841ED9 /* Foundation.framework in Frameworks */,
+				A421BFC9BD94405C9BDFB1F1 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +95,7 @@
 				F1C6B5A61963A57500841ED9 /* iRingTests */,
 				F1C6B57D1963A57500841ED9 /* Frameworks */,
 				F1C6B57C1963A57500841ED9 /* Products */,
+				1C1CD3D43C3C497297F53579 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +115,7 @@
 				F1C6B5801963A57500841ED9 /* CoreGraphics.framework */,
 				F1C6B5821963A57500841ED9 /* UIKit.framework */,
 				F1C6B5A01963A57500841ED9 /* XCTest.framework */,
+				CB49D4B27D6C468084382878 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -118,6 +126,7 @@
 				F1C6B58D1963A57500841ED9 /* AppDelegate.h */,
 				F1C6B58E1963A57500841ED9 /* AppDelegate.m */,
 				F1C6B5901963A57500841ED9 /* Main.storyboard */,
+				F1C6B5FD19643D5C00841ED9 /* img.png */,
 				F1C6B5931963A57500841ED9 /* MasterViewController.h */,
 				F1C6B5941963A57500841ED9 /* MasterViewController.m */,
 				F1C6B5961963A57500841ED9 /* DetailViewController.h */,
@@ -164,9 +173,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F1C6B5B01963A57500841ED9 /* Build configuration list for PBXNativeTarget "iRing" */;
 			buildPhases = (
+				CB0BD54673FE4E9D82110FDA /* Check Pods Manifest.lock */,
 				F1C6B5771963A57500841ED9 /* Sources */,
 				F1C6B5781963A57500841ED9 /* Frameworks */,
 				F1C6B5791963A57500841ED9 /* Resources */,
+				2DB4AF83F57A4B23800DBEAA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,6 +247,7 @@
 				F1C6B59A1963A57500841ED9 /* Images.xcassets in Resources */,
 				F1C6B5891963A57500841ED9 /* InfoPlist.strings in Resources */,
 				F1C6B5921963A57500841ED9 /* Main.storyboard in Resources */,
+				F1C6B5FE19643D5C00841ED9 /* img.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +260,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2DB4AF83F57A4B23800DBEAA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB0BD54673FE4E9D82110FDA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F1C6B5771963A57500841ED9 /* Sources */ = {
@@ -379,6 +424,7 @@
 		};
 		F1C6B5B11963A57500841ED9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C1CD3D43C3C497297F53579 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -392,6 +438,7 @@
 		};
 		F1C6B5B21963A57500841ED9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C1CD3D43C3C497297F53579 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -462,6 +509,7 @@
 				F1C6B5B21963A57500841ED9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F1C6B5B31963A57500841ED9 /* Build configuration list for PBXNativeTarget "iRingTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +518,7 @@
 				F1C6B5B51963A57500841ED9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

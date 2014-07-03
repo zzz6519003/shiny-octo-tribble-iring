@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import <FBShimmeringView.h>
 
 @interface DetailViewController ()
 - (void)configureView;
@@ -31,8 +32,19 @@
     // Update the user interface for the detail item.
 
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+
     }
+    
+    self.detailDescriptionLabel.text = [self.detailItem description];
+    FBShimmeringView *shimmeringView = [[FBShimmeringView alloc] initWithFrame:self.navigationController.view.bounds];
+    [self.view addSubview:shimmeringView];
+    
+    shimmeringView.contentView = self.detailTextView;
+    
+    // Start shimmering.
+    shimmeringView.shimmering = YES;
+
+    
 }
 
 - (void)viewDidLoad

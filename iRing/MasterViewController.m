@@ -7,12 +7,15 @@
 //
 
 #import "MasterViewController.h"
-
 #import "DetailViewController.h"
+#import <FBShimmering.h>
+#import <FBShimmeringView.h>
 
 @interface MasterViewController () {
     NSMutableArray *_objects;
 }
+
+@property (strong, nonatomic) NSArray *fingleArray;
 @end
 
 @implementation MasterViewController
@@ -30,6 +33,20 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
+    
+    self.fingleArray = @[@"大拇指", @"食指", @"中指", @"无名指", @"小拇指"];
+    
+//    FBShimmeringView *shimmeringView = [[FBShimmeringView alloc] initWithFrame:self.view.bounds];
+//    [self.view addSubview:shimmeringView];
+//    
+//    UILabel *loadingLabel = [[UILabel alloc] initWithFrame:shimmeringView.bounds];
+//    loadingLabel.textAlignment = NSTextAlignmentCenter;
+//    loadingLabel.text = NSLocalizedString(@"Shimmer", nil);
+//    shimmeringView.contentView = self.view;
+//    
+//    // Start shimmering.
+//    shimmeringView.shimmering = YES;
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,27 +69,47 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _objects.count;
+    return self.fingleArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    UITableViewCell *cell = 
+    [UITableViewCell new];
+    
+    FBShimmeringView *shimmeringView = [[FBShimmeringView alloc] initWithFrame:cell.bounds];
+    [self.view addSubview:shimmeringView];
 
-    NSDate *object = _objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    UILabel *label = [[UILabel alloc] initWithFrame:shimmeringView.bounds];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.text = self.fingleArray[indexPath.row];
+    shimmeringView.contentView = label;
+
+    // Start shimmering.
+//    shimmeringView.shimmering = YES;
+//    if (!shimmeringView.isShimmering) {
+    shimmeringView.shimmering = NO;
+        shimmeringView.shimmeringWithDelay = indexPath.row * 0.2;
+//    }
+
+//    cell.textLabel.text = self.fingleArray[indexPath.row];
+    [cell addSubview:shimmeringView];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
-    return YES;
+    return NO;
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
