@@ -14,6 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 
-@property (weak, nonatomic) IBOutlet UITextView *detailTextView;
+@property (assign, nonatomic) NSInteger whichFinger;
 
 @end

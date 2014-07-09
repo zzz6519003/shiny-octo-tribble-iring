@@ -103,7 +103,9 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    DetailViewController *dv = [self.storyboard instantiateViewControllerWithIdentifier:@"detailV"];
+    dv.whichFinger = indexPath.section * 5 + indexPath.row;
+    [self.navigationController pushViewController:dv animated:YES];
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath

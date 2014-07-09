@@ -10,7 +10,14 @@
 #import <FBShimmeringView.h>
 
 @interface DetailViewController ()
+
+
 - (void)configureView;
+
+@property (weak, nonatomic) IBOutlet UITextView *detailTextView;
+
+@property (strong, nonatomic) NSArray *fingerArray;
+
 @end
 
 @implementation DetailViewController
@@ -32,7 +39,6 @@
     // Update the user interface for the detail item.
 
     if (self.detailItem) {
-
     }
     
     self.detailDescriptionLabel.text = [self.detailItem description];
@@ -51,6 +57,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.fingerArray = [NSArray arrayWithContentsOfFile:nil];
     [self configureView];
 }
 
