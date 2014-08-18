@@ -1,0 +1,19 @@
+PODS:
+  - KVOController (1.0.1)
+  - pop (1.0.6)
+  - Shimmer (1.0.1)
+  - Tweaks (1.1.0)
+
+DEPENDENCIES:
+  - KVOController
+  - pop
+  - Shimmer
+  - Tweaks
+
+SPEC CHECKSUMS:
+  KVOController: e6ad4a058ab0ceed546802361adb89d322a22cf2
+  pop: e518794da38942c05255eb64b36d894e70cb4f00
+  Shimmer: 35aa2a57b8fbc17f9e16706021665966fd93dbd1
+  Tweaks: 05b197d4a1247288f576587546bc1932189d8c98
+
+COCOAPODS: 0.32.1

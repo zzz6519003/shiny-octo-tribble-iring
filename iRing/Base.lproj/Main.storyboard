@@ -73,11 +73,18 @@
                     <view key="view" contentMode="scaleToFill" id="MMQ-IT-qOo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="img.png" translatesAutoresizingMaskIntoConstraints="NO" id="C8C-cf-DeI">
+                                <rect key="frame" x="-6" y="184" width="321" height="384"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="cra-N8-TIN"/>
                     <connections>
                         <outlet property="detailTextView" destination="VY2-w8-Rlr" id="zJ6-u7-EpR"/>
+                        <outlet property="imageView" destination="C8C-cf-DeI" id="dbr-dF-kgk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
@@ -93,6 +100,9 @@
             <point key="canvasLocation" x="902" y="64"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="img.png" width="439" height="436"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
